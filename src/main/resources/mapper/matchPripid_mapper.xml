@@ -1,0 +1,15 @@
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.MatchPripidMapper">
+    <update id="matchPripidByUNISCID" parameterType="java.lang.String" >
+     update zr_licence T set pripid=(select pripid from ${_parameter} WHERE UNISCID=T.UNISCID AND ROWNUM=1)
+     WHERE PRIPID IS NULL
+
+    </update>
+    <update id="matchPripidByENTNAME" parameterType="java.lang.String" >
+    update zr_licence T set pripid=(select pripid from ${_parameter} WHERE ENTNAME=T.ENTNAME AND ROWNUM=1)
+    WHERE PRIPID IS NULL
+    </update>
+
+</mapper>

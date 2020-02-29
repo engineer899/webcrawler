@@ -1,0 +1,128 @@
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.AddMapper">
+    <insert id="addJX" parameterType="test.entity.Data">
+        insert into ZR_LICENCE_JX(
+                        ENTNAME,
+                        LICENCE_TYPE,
+                        START_TIME,
+                        END_TIME,
+                        REGORG,
+                        REGORG_ID,
+                        STATUS,
+                        ADDTIME,
+                        ADDUSER,
+                        LICENCE_NUM,
+                        SIGNER,
+                        PUBLIC_DATE,
+                        ADDRESS,
+                        BUSINESS_ADDRESS,
+                        ADMINISTRATION,
+                        ADMIN_PERSON,
+                        UNISCID,
+                        CONTENT)
+        values(
+                        #{ENTNAME},
+                        #{LICENCE_TYPE},
+                        #{START_TIME},
+                        #{END_TIME},
+                        #{REGORG},
+                        #{REGORG_ID},
+                        #{STATUS},
+                        #{ADDTIME},
+                        #{ADDUSER},
+                        #{LICENCE_NUM},
+                        #{SIGENR},
+                        #{PUBLIC_DATE},
+                        #{ADDRESS},
+                        #{BUSINESS_ADDRESS},
+                        #{ADMINISTRATION},
+                        #{ADMIN_PERSON},
+                        #{UNISCID},
+                        #{CONTENT})
+
+    </insert>
+    <insert id="addLicence" parameterType="test.entity.Data">
+        insert into ZR_LICENCE(
+                        ENTNAME,
+                        LICENCE_TYPE,
+                        START_TIME,
+                        END_TIME,
+                        REGORG,
+                        REGORG_ID,
+                        STATUS,
+                        ADDTIME,
+                        ADDUSER,
+                        LICENCE_NUM,
+                        SIGNER,
+                        PUBLIC_DATE,
+                        ADDRESS,
+                        BUSINESS_ADDRESS,
+                        ADMINISTRATION,
+                        ADMIN_PERSON,
+                        UNISCID,
+                        CONTENT)
+        values(
+                        #{ENTNAME},
+                        #{LICENCE_TYPE},
+                        #{START_TIME},
+                        #{END_TIME},
+                        #{REGORG},
+                        #{REGORG_ID},
+                        #{STATUS},
+                        #{ADDTIME},
+                        #{ADDUSER},
+                        #{LICENCE_NUM},
+                        #{SIGENR},
+                        #{PUBLIC_DATE},
+                        #{ADDRESS},
+                        #{BUSINESS_ADDRESS},
+                        #{ADMINISTRATION},
+                        #{ADMIN_PERSON},
+                        #{UNISCID},
+                        #{CONTENT})
+
+    </insert>
+    <!--<insert id="addCR" parameterType="test.entity.Data">-->
+        <!--insert into ZR_LICENCE(-->
+                        <!--ENTNAME,-->
+                        <!--LICENCE_TYPE,-->
+                        <!--START_TIME,-->
+                        <!--END_TIME,-->
+                        <!--REGORG,-->
+                        <!--REGORG_ID,-->
+                        <!--STATUS,-->
+                        <!--ADDTIME,-->
+                        <!--ADDUSER,-->
+                        <!--LICENCE_NUM,-->
+                        <!--SIGNER,-->
+                        <!--PUBLIC_DATE,-->
+                        <!--ADDRESS,-->
+                        <!--BUSINESS_ADDRESS,-->
+                        <!--ADMINISTRATION,-->
+                        <!--ADMIN_PERSON,-->
+                        <!--UNISCID,-->
+                        <!--CONTENT)-->
+        <!--values(-->
+                        <!--#{ENTNAME},-->
+                        <!--#{LICENCE_TYPE},-->
+                        <!--#{START_TIME},-->
+                        <!--#{END_TIME},-->
+                        <!--#{REGORG},-->
+                        <!--#{REGORG_ID},-->
+                        <!--#{STATUS},-->
+                        <!--#{ADDTIME},-->
+                        <!--#{ADDUSER},-->
+                        <!--#{LICENCE_NUM},-->
+                        <!--#{SIGENR},-->
+                        <!--#{PUBLIC_DATE},-->
+                        <!--#{ADDRESS},-->
+                        <!--#{BUSINESS_ADDRESS},-->
+                        <!--#{ADMINISTRATION},-->
+                        <!--#{ADMIN_PERSON},-->
+                        <!--#{UNISCID},-->
+                        <!--#{CONTENT})-->
+
+    <!--</insert>-->
+</mapper>

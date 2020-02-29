@@ -1,0 +1,75 @@
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.dao.CheckTimeMapper">
+    <select id="checkUpTimeJX" parameterType="java.lang.Integer" resultType="java.sql.Timestamp">
+        select * from (
+        select t.addtime from ZR_LICENCE_JX t where
+        t.addtime is not null and t.adduser='admin' and
+        <if test="TYPE==1">
+            t.licence_type='1'
+        </if>
+        <if test="TYPE==2">
+            t.licence_type in ('2','10','11')
+        </if>
+        <if test="TYPE==3">
+            t.licence_type='3'
+        </if>
+        <if test="TYPE==4">
+            t.licence_type='9'
+        </if>
+        <if test="TYPE==5">
+            t.licence_type='5'
+        </if>
+        <if test="TYPE==6">
+            t.licence_type='7'
+        </if>
+        <if test="TYPE==7">
+            t.licence_type='8'
+        </if>
+        <if test="TYPE==8">
+            t.licence_type='4'
+        </if>
+        <if test="TYPE==9">
+            t.licence_type='6'
+        </if>
+        order by t.addtime desc
+        ) where  rownum &lt;= 1
+
+    </select>
+    <select id="checkUpTime" parameterType="java.lang.Integer" resultType="java.sql.Timestamp">
+        select * from (
+        select t.addtime from ZR_LICENCE t where
+        t.addtime is not null and t.adduser='admin' and
+        <if test="TYPE==1">
+            t.licence_type='1'
+        </if>
+        <if test="TYPE==2">
+            t.licence_type in ('2','10','11')
+        </if>
+        <if test="TYPE==3">
+            t.licence_type='3'
+        </if>
+        <if test="TYPE==4">
+            t.licence_type='9'
+        </if>
+        <if test="TYPE==5">
+            t.licence_type='5'
+        </if>
+        <if test="TYPE==6">
+            t.licence_type='7'
+        </if>
+        <if test="TYPE==7">
+            t.licence_type='8'
+        </if>
+        <if test="TYPE==8">
+            t.licence_type='4'
+        </if>
+        <if test="TYPE==9">
+            t.licence_type='6'
+        </if>
+        order by t.addtime desc
+        ) where  rownum &lt;= 1
+
+    </select>
+</mapper>
